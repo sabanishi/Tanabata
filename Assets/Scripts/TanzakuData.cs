@@ -5,13 +5,13 @@ namespace DefaultNamespace
     /// </summary>
     public class TanzakuData
     {
-        public readonly int _posIndex;
+        public readonly string _color;
         public readonly string _content;
         public readonly string _name;
 
-        public TanzakuData(int posIndex, string content, string name)
+        public TanzakuData(string color, string content, string name)
         {
-            _posIndex = posIndex;
+            _color = color;
             _content= content;
             _name = name;
         }

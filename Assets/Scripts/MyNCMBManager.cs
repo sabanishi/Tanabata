@@ -15,7 +15,7 @@ namespace DefaultNamespace
         public void Save(TanzakuData data)
         {
             NCMBObject saveClass = new NCMBObject(APP_KEY);
-            saveClass["posIndex"] = data._posIndex;
+            saveClass["color"] = data._color;
             saveClass["content"] = data._content;
             saveClass["name"] = data._name;
             saveClass.SaveAsync();
@@ -45,7 +45,7 @@ namespace DefaultNamespace
             var tanzakuData = new TanzakuData[results.Count];
             for (int i = 0; i < results.Count; i++)
             {
-                tanzakuData[i] = new TanzakuData(int.Parse(results[i]["posIndex"].ToString()), results[i]["content"].ToString(), results[i]["name"].ToString());
+                tanzakuData[i] = new TanzakuData(results[i]["color"].ToString(), results[i]["content"].ToString(), results[i]["name"].ToString());
             }
             return tanzakuData;
         }
